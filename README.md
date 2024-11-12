@@ -21,7 +21,7 @@ A Python-based Personal Finance Tracker that helps you manage, track, and analyz
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/personal-finance-tracker.git
+    git clone https://github.com/j3ffh95/personal-finance-tracker.git
     cd personal-finance-tracker
     ```
 
