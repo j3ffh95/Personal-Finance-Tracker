@@ -5,6 +5,7 @@ from datetime import datetime
 
 class CSV:
     CSV_FILE = "finance_data.csv"
+    COLUMNS = ["date", "amount", "category", "description"]
 
     # Initialize the CSV file
     @classmethod
@@ -14,7 +15,7 @@ class CSV:
         except FileNotFoundError:
             # A DataFrame is an object within pandas that allows us to access different rows/columns from a CSV file
             df = pd.DataFrame(
-                columns=["date", "amount", "category", "description"])
+                columns=cls.COLUMNS)
             # The code below will write the DataFrame to the CSV file
             df.to_csv(cls.CSV_FILE, index=False)
 
@@ -27,6 +28,11 @@ class CSV:
             "category": category,
             "description": description
         }
+        # Create CSV writer
+        with open(cls.CSV_FILE, "a", newline="") as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=cls.COLUMNS)
+            writer.writerow(new_entry)
+        print("Entry added successfully!")
 
 
 CSV.initialize_csv()
