@@ -37,5 +37,5 @@ def get_category():
     return get_category()
 
 
-def get_description(prompt):
-    pass
+def get_description():
+    return input("Enter a description (optional): ")
