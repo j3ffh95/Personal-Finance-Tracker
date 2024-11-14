@@ -35,6 +35,9 @@ class CSV:
             writer.writerow(new_entry)
         print("Entry added successfully!")
 
+    @classmethod
+    def get_transactions(cls, start_date, end_date):
+
 
 def add():
     CSV.initialize_csv()
