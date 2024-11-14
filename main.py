@@ -37,6 +37,7 @@ class CSV:
 
     @classmethod
     def get_transactions(cls, start_date, end_date):
+        df = pd.read_csv(cls.CSV_FILE)
 
 
 def add():
