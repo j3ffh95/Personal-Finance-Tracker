@@ -7,6 +7,7 @@ from data_entry import get_amount, get_category, get_date, get_description
 class CSV:
     CSV_FILE = "finance_data.csv"
     COLUMNS = ["date", "amount", "category", "description"]
+    FORMAT = "%m-%d-%Y"
 
     # Initialize the CSV file
     @classmethod
