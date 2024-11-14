@@ -39,6 +39,7 @@ class CSV:
     @classmethod
     def get_transactions(cls, start_date, end_date):
         df = pd.read_csv(cls.CSV_FILE)
+        df["date"] = pd.to_datetime(df["date"], format=CSV.FORMAT)
 
 
 def add():
