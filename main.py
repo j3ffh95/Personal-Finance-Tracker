@@ -43,6 +43,8 @@ class CSV:
         start_date = datetime.strptime(start_date, CSV.FORMAT)
         end_date = datetime.strptime(end_date, CSV.FORMAT)
 
+        mask = (df["date"] >= start_date) & (df["date"] <= end_date)
+
 
 def add():
     CSV.initialize_csv()
