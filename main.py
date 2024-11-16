@@ -44,6 +44,7 @@ class CSV:
         end_date = datetime.strptime(end_date, CSV.FORMAT)
 
         mask = (df["date"] >= start_date) & (df["date"] <= end_date)
+        filtered_df = df.loc[mask]
 
 
 def add():
