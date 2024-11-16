@@ -51,6 +51,8 @@ class CSV:
         else:
             print(
                 f"Transactions for {start_date.strftime(CSV.FORMAT)} to {end_date.strftime(CSV.FORMAT)}:")
+            print(filtered_df.to_string(index=False, formatters=(
+                "date", lambda x: x.strftime(CSV.FORMAT))))
 
 
 def add():
