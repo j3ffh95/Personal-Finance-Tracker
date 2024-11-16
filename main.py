@@ -54,6 +54,9 @@ class CSV:
             print(filtered_df.to_string(index=False, formatters=(
                 "date", lambda x: x.strftime(CSV.FORMAT))))
 
+            total_income = filtered_df[filtered_df["category"]
+                                       == "Income"]["amount"].sum()
+
 
 def add():
     CSV.initialize_csv()
